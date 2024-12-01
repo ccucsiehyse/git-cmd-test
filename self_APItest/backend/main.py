@@ -7,8 +7,8 @@ app = FastAPI()
 # 允許所有來源，開發階段使用
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://frontend:8000"],  # 允許特定的前端來源
-    allow_credentials=True,
+    allow_origins=["*"],#["http://frontend:8000"],  # 允許特定的前端來源
+    #allow_credentials=True,
     allow_methods=["*"],  # 允許所有 HTTP 方法（GET, POST, etc.）
     allow_headers=["*"],  # 允許所有標頭
 )
